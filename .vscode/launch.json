@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Student",
+            "request": "launch",
+            "mainClass": "StudentManagement.test.Student",
+            "projectName": "MiniProject_eab8a89"
+        },
+        {
+            "name": "Debug Your App",
+            "type": "node",
+            "stopOnEntry": true,
+            "request": "launch",
+            "program": "${workspaceFolder}/path/to/your/entry-point.js",
+            "skipFiles": [
+                "${workspaceFolder}/path/to/ignore/**/*.js"
+            ]
+        }
+    ]
+}

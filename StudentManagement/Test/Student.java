@@ -1,12 +1,12 @@
 package StudentManagement.test;
 import java.util.*;
 import java.util.Scanner;
-
 import StudentManagement.services.AddStud;
 
 public class Student {
    public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
+    Student std=new Student();
     int choice=0;
     do{
         try{
@@ -20,17 +20,21 @@ public class Student {
             choice=sc.nextInt();
             switch (choice) {
                 case 1:
-                // ArrayList list=new ArrayList<>();
-                // System.out.println("Enter the first name,last name,roll no,cgpa,course:");
-                // String firstName=sc.nextLine();
-                // String lastName=sc.nextLine();
-                // int rollNo=sc.nextInt();
-                // float cgpa=sc.nextFloat();
-                // String course=sc.nextLine();
-                // list.add(new ArrayList<>());
+                ArrayList<Integer> mark=new ArrayList<>();
+                System.out.println("Enter the name,roll no,mark,course:");
+                String name=sc.next();
+                int rollNo=sc.nextInt();
+                String course=sc.next();
+                for(int i=0;i<6;i++){
+                    mark.add(sc.nextInt());
+                }
+                std.add(new AddStud(name,rollNo,course,mark));
+                //new AddStud(name,rollNo,course,mark);
                     break;
 
                 case 2:
+                int findRollNo=sc.nextInt();
+
                 break;
 
                 case 3:
@@ -56,4 +60,5 @@ public class Student {
         }
     }while(choice!=7);
    }
+
 }
