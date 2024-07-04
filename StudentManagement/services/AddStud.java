@@ -1,24 +1,27 @@
 package StudentManagement.services;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddStud {
     String name;
     int rollNo;
     String course;
-    ArrayList<Integer> mark;
+    List<Integer> mark;
     public AddStud(){}
-    public AddStud(String name,int rollNo,String course,ArrayList<Integer> mark){
+    public AddStud(String name,int rollNo,String course,List<Integer> mark){
         this.name=name;
         this.rollNo=rollNo;
         this.course=course;
         this.mark=mark;
-        System.out.println("Name: "+name);
-        System.out.println("RollNo: "+rollNo);
-        System.out.println("Course:"+course);
-        System.out.println("Marks: "+mark);
     }
-    public  String toString(){
-        return name+"\t"+rollNo+"\t"+course+"\t"+mark;
+    public String toString() {
+        return "Name: " + name + "\n" +
+               "RollNo: " + rollNo + "\n" +
+               "Course: " + course + "\n" +
+               "Marks: " + mark + "\n";
+    }
+    public int getRollNo() {
+        return rollNo;
     }
 }
