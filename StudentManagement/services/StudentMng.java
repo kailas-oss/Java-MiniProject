@@ -21,8 +21,10 @@ public class StudentMng implements StudentInterface {
         return true;
     }
 
-    public void StudDelete(int rollNo){
+    public void StudDelete(int rollNo) throws StudEx{
         List<AddStud> s = list.stream().filter(i -> i.getRollNo() == rollNo).limit(1).collect(Collectors.toList());
+        if(list.isEmpty())
+            throw new StudEx("does not ");
         
     }
 }
