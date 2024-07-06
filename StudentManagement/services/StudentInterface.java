@@ -1,10 +1,10 @@
 package StudentManagement.services;
 
-import StudentManagement.StudentExcep.StudEx;
-
-//import StudentManagement.StudentExcep.StudEx;;
-//System.out.println("Enter the name,roll no,mark,course:");
 public interface StudentInterface {
     boolean AddStudent(AddStud s); 
-    void StudDelete(int rollNo);
+    void StudDelete(int rollNo) throws Exception;
+    void StudDetails();
+    void Update(int rollNo,AddStud s) throws Exception;
+    void findTopper() throws Exception;
+
 }
