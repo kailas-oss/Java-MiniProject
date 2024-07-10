@@ -5,6 +5,6 @@ public interface StudentInterface {
     void StudDelete(int rollNo) throws Exception;
     void StudDetails();
     void Update(int rollNo,AddStud s) throws Exception;
-    void findTopper() throws Exception;
+    AddStud findTopper() throws Exception;
 
 }

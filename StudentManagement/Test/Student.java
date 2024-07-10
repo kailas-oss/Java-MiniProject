@@ -55,7 +55,7 @@ public class Student {
                 break;
 
                 case 5:
-                stdMng.findTopper();
+                System.out.println(stdMng.findTopper());
                 break;
 
                 case 6:

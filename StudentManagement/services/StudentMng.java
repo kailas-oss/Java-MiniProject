@@ -42,17 +42,17 @@ public class StudentMng implements StudentInterface {
         throw new StudEx("Student doesn't exist at this rollNo! ");
         Collections.replaceAll(list, s.get(0), Upstudent);
     }
-    public void findTopper() throws Exception{
-        if (list.isEmpty()) {
-            throw new StudEx("Student list is empty!");
-        }
-        AddStud topper = list.stream()
-                .max(Comparator.comparingInt(s -> s.getMark().stream().mapToInt(x -> x).sum()))
-                .orElseThrow(() -> new StudEx("Could not find the topper"));
-        System.out.println("Topper: " + topper);
-    }
+    public AddStud findTopper()
+    {
+        AddStud ans = list.get(0);
+        int big = list.get(0).getMarks().stream().mapToInt(x->x).sum();
+        for(AddStud s:list)
+            if(big<s.getMarks().stream().mapToInt(x->x).sum())
+            {
+                big =s.getMarks().stream().mapToInt(x->x).sum();
+                ans = s;
+            }
+        return ans;
+    } 
+
 }
-/*String name;
-    int rollNo;
-    String course;
-    List<Integer> mark; */
