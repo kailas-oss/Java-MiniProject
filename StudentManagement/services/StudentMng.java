@@ -35,7 +35,7 @@ public class StudentMng implements StudentInterface {
     }
 
     @Override
-    public void Update(int rollNo,AddStud Upstudent) throws Exception {
+    public void Update(int rollNo,AddStud Upstudent) throws StudEx {
         List<AddStud> s = list.stream().filter(i -> i.getRollNo() == rollNo).limit(1).collect(Collectors.toList());
         System.out.println(s);
         if(s.isEmpty())

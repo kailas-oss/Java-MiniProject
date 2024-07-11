@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ParkingTest",
+            "request": "launch",
+            "mainClass": "ParkingMangement.Test.ParkingTest",
+            "projectName": "MiniProject_eab8a89"
+        },
+        {
+            "type": "java",
             "name": "Student",
             "request": "launch",
             "mainClass": "StudentManagement.test.Student",
