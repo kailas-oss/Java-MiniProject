@@ -15,5 +15,17 @@ public class ParkingMangement {
         List.add(vehicle);
         return;
     }
+    public void displayAll() throws SlotNotava{
+        if(List.isEmpty()){
+            throw new SlotNotava("........No data's present.........");
+        }
+        else{
+            int count = List.size();
+            System.out.println(count);
+            for(Vehicle veh:List){
+                System.out.println(veh);
+            }
+        }
+    }
 
 }
